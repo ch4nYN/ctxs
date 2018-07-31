@@ -1,0 +1,40 @@
+<div class="container">
+  <h2 style="color:#0d47a1">balance: $ {{ usdAmount.total | number : '1.2-2' }}</h2>
+  <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>currency name</th>
+        <th>$ value</th>
+        <th>balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>US DOLLARS</td>
+        <td> $ {{ usdAmount.usd  | number : '1.2-2' }} </td>
+        <td>{{ accountWallet.balance }} USD</td>
+      </tr>
+      <tr>
+        <td>BITCOIN</td>
+        <td> $ {{ usdAmount.btc | number : '1.2-2' }} </td>
+        <td>{{ accountWallet.btcBalance }} BTC</td>
+      </tr>
+      <tr>
+        <td>ETHEREUM</td>
+        <td> $ {{ usdAmount.eth | number : '1.2-2' }} </td>
+        <td>{{ accountWallet.ethBalance }} ETH</td>
+      </tr>
+      <tr>
+        <td>LITECOIN</td>
+        <td> $ {{ usdAmount.ltc | number : '1.2-2' }} </td>
+        <td>{{ accountWallet.ltcBalance }} LTC</td>
+      </tr>
+      <tr>
+        <td>BITCOIN CASH</td>
+        <td> $ {{ usdAmount.bch | number : '1.2-2' }} </td>
+        <td>{{ accountWallet.bchBalance }} BCH</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

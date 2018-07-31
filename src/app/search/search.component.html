@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input id="search-term" type="text" class="form-control"  value="{{ this.searchTerm }}" />
+      <div class="input-group-btn"> 
+        <button type="button"
+          class="btn btn-primary"
+          (click)="onSearch()"
+        >
+        search</button>
+      </div>
+    </div>
+  </div>
+</div>

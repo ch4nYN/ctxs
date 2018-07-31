@@ -1,0 +1,15 @@
+div a {
+  color: #0d47a1;
+  font-size:16px;
+  outline:none;
+}
+div a:visited {
+  color:#0d47a1;
+}
+li a:visited {
+  color: #0d47a1;
+}
+li a:hover {
+  text-decoration:none;
+  color:black;
+}

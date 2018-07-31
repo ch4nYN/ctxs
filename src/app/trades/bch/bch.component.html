@@ -1,0 +1,52 @@
+<div class="container">
+  <div id="graphContent">
+  </div>  
+</div>
+
+<hr>
+
+<div class="container">
+
+  <form class="card" #form1="ngForm" (ngSubmit)="placeBuyOrder($event)">
+      <h2 class="card-header">
+        BUY
+      </h2>
+      <div class="input-group">
+        <input type="number" class="form-control" placeholder="0.00" (change)="calculateBuyFeeAndTotal($event)" >
+        <span class="input-group-addon">$</span>
+      </div><br>
+      <div class="input-group">
+        <input type="number" class="form-control" placeholder="0.00" value="{{ buyOrder.fee }}" disabled>
+        <span class="input-group-addon">Fee</span>
+      </div><br>
+      <div class="input-group">
+        <input type="number" class="form-control" placeholder="0.00"  value="{{ buyOrder.total }}" disabled>
+        <span class="input-group-addon">Total (BCH)</span>
+      </div><br>
+      <button type="submit" class="btn  btn-lg btn-success">place buy order</button>
+      <br><br>
+      <p class="text-danger">{{ buydesc }}</p>
+    </form>
+    
+    <form class="card" #form2="ngForm" (ngSubmit)="placeSellOrder(form2.value)">
+      <h2 class="card-header">
+        SELL
+      </h2>
+      <div class="input-group">
+        <input type="number" class="form-control" placeholder="0.00" (change)="calculateSellFeeAndTotal($event)">
+        <span class="input-group-addon">BCH</span>
+      </div><br>
+      <div class="input-group">
+        <input type="number" class="form-control" placeholder="0.00" value="{{ sellOrder.fee }}" disabled>
+        <span class="input-group-addon">Fee</span>
+      </div><br>
+      <div class="input-group">
+        <input type="number" class="form-control" placeholder="0.00" value="{{ sellOrder.total }}" disabled>
+        <span class="input-group-addon">Total (USD)</span>
+      </div><br>
+      <button class="btn  btn-lg btn-danger">place sell order</button>
+      <br><br>
+      <p class="text-danger">{{ selldesc }}</p>
+    </form>
+
+</div>
